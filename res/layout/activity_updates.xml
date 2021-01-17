@@ -49,9 +49,12 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:fontFamily="@*android:string/config_headlineFontFamily"
-                    android:paddingBottom="16dp"
-                    android:textColor="@color/header_title_text_color"
-                    android:textSize="30sp" />
+                    android:paddingBottom="10dp"
+                    android:alpha="0.9"
+                    android:letterSpacing="0.08"
+                    android:layout_below="@id/ic_header"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="32sp" />
 
                 <TextView
                     android:id="@+id/header_device_name"
@@ -79,17 +82,17 @@
                     android:paddingBottom="24dp"
                     android:alpha="0.75"
                     android:letterSpacing="0.08"
-                    android:layout_below="@id/header_title"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="20sp" />
+                    android:layout_below="@id/header_build_date"
+                    android:textColor="@color/header_device_name_text_color"
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/header_last_check"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:layout_below="@id/maintainer_name"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_below="@id/header_device_name"
+                    android:textColor="@color/header_device_name_text_color"
                     android:textSize="14sp" />
 
             </RelativeLayout>
