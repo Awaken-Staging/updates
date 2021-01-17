@@ -419,6 +419,17 @@ public class UpdatesActivity extends UpdatesListActivity {
         }
     }
 
+    private void updateLastCheckedString() {
+        final SharedPreferences preferences =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        long lastCheck = preferences.getLong(Constants.PREF_LAST_UPDATE_CHECK, -1) / 1000;
+        String lastCheckString = getString(R.string.header_last_updates_check,
+                StringGenerator.getDateLocalized(this, DateFormat.LONG, lastCheck),
+                StringGenerator.getTimeLocalized(this, lastCheck));
+        TextView headerLastCheck = (TextView) findViewById(R.id.header_last_check);
+        headerLastCheck.setText("Last update check: " + lastCheckString);
+    }
+
     @Override
     public void showSnackbar(int stringId, int duration) {
         Snackbar.make(findViewById(R.id.main_container), stringId, duration).show();

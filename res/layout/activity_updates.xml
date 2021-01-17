@@ -83,6 +83,15 @@
                     android:textColor="?android:attr/textColorPrimary"
                     android:textSize="20sp" />
 
+                <TextView
+                    android:id="@+id/header_last_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_below="@id/maintainer_name"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="14sp" />
+
             </RelativeLayout>
 
             <androidx.appcompat.widget.Toolbar
